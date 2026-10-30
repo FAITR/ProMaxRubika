@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promaxrubika"
+version = "0.1.0"
+description = "Async modular framework for Rubika self-account clients with pluggable transports"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "FAITR", email = "maintainer@example.invalid"}]
+keywords = ["rubika", "async", "client", "messaging", "faitr"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://rubika.ir/promaxrubika"
+Repository = "https://github.com/FAITR/ProMaxRubika"
+Issues = "https://github.com/FAITR/ProMaxRubika/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["promaxrubika*"]
+
+[tool.setuptools.package-data]
+promaxrubika = ["py.typed"]
